@@ -3,11 +3,11 @@ pipeline {
 
     environment {
         // ====> Replace with your AWS region, e.g., 'us-east-1'
-        AWS_REGION = 'your-aws-region'
+        AWS_REGION = 'us-east-2'
 
         // ====> Replace with your own ECR repository URIs
-        FRONTEND_REPO = 'your-frontend-ecr-repo-uri'
-        BACKEND_REPO  = 'your-backend-ecr-repo-uri'
+        FRONTEND_REPO = '833068513394.dkr.ecr.us-east-2.amazonaws.com/devops-challenge-frontend'
+        BACKEND_REPO  = '833068513394.dkr.ecr.us-east-2.amazonaws.com/devops-challenge-backend'
     }
 
     stages {
