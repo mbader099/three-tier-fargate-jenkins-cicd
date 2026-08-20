@@ -56,7 +56,7 @@ pipeline {
 
         stage('Update ECS services') {
             steps {
-                withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'your-aws-credentials-id']]) {
+                withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws']]) {
                     script {
                         sh '''
                             aws ecs update-service --cluster your-ecs-cluster-name --service your-frontend-service-name --force-new-deployment --region $AWS_REGION
